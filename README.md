@@ -14,3 +14,23 @@ Sample_neuralnetwork.ipynb :In this experiment, I learned the basic workflow use
 - During inference, gradients are not required, so `torch.no_grad()` can be used.
 
 This small experiment provides the foundation for moving on to deeper networks, CNNs, RNNs and other deep-learning architectures.
+
+Sample_P_Dataset_Dataloader.ipynb ## Key Takeaways
+
+In this experiment, I learned how PyTorch handles datasets that are too large to process all at once.
+
+The main training workflow was:
+
+**Dataset → DataLoader → Batches → Forward Pass → Loss → Backpropagation → Parameter Update**
+
+Key observations:
+
+- A Dataset represents samples and their labels.
+- A DataLoader controls how samples are provided to the model.
+- Batch size determines how many samples are processed together.
+- Shuffling changes the training sample order between epochs.
+- Model parameters are updated after each training batch.
+- An epoch represents one complete pass through the training dataset.
+- Average epoch loss gives a better view of training progress than the loss of a single batch.
+- Accuracy can be used to evaluate classification predictions.
+- Tensor shape and `dtype` are important things to inspect when debugging PyTorch errors.
